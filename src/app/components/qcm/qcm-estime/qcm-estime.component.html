@@ -1,0 +1,171 @@
+<div [formGroup]="formEstime">
+    <h3 class="text-center">Estime de soi</h3>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    Définition
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>L'estime de soi, en préparation mentale, est la perception de sa propre valeur et de ses
+                        compétences. Elle influence directement la capacité à prendre des risques, à s’engager
+                        pleinement, et à persévérer face aux défis. Une estime de soi élevée favorise la résilience et
+                        permet de mieux gérer les échecs, tandis qu'une estime de soi faible peut entraîner des
+                        comportements d’auto-sabotage ou de retrait. La préparation mentale vise à renforcer l'estime de
+                        soi grâce à des techniques telles que les affirmations positives, la visualisation des succès
+                        passés, et la mise en place de routines régulières. Une bonne estime de soi est essentielle pour
+                        maximiser les performances et aborder chaque situation avec assurance et optimisme.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    Rôle
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>L'estime de soi est un élément essentiel de la performance sportive, car elle influence la
+                        confiance de l'athlète en ses capacités, sa motivation, et sa persévérance.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-3 mt-5">
+        <div class="col-9">
+            <p>1. Je me sens généralement compétent(e) dans mon sport.
+                <i class="bi bi-info-circle"
+                    matTooltip="Sentiment de compétence"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm1" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>2. J’ai confiance en mes capacités à surmonter les défis que je rencontre dans mon sport.
+                <i class="bi bi-info-circle" matTooltip="Confiance en soi face aux défis"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm2" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>3. Je me sens fier(ère) de mes accomplissements, même si ce sont de petites victoires.
+                <i class="bi bi-info-circle"
+                    matTooltip="Fierté et satisfaction personnelle"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm3" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>4. Je me compare souvent aux autres et je me sens inférieur(e) ou moins capable.
+                <i class="bi bi-info-circle" matTooltip="Comparaison sociale"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm4" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>5. J’accepte mes erreurs et mes échecs, et je les utilise pour progresser.
+                <i class="bi bi-info-circle" matTooltip="Attitude face aux échecs"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm5" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>6. Je pense que je mérite le respect et la reconnaissance de mes coéquipiers et/ou de mon entraîneur.
+                <i class="bi bi-info-circle" matTooltip="Estime de soi dans le groupe"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm6" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>7. Je suis capable de maintenir un bon niveau de confiance, même après une mauvaise performance.
+                <i class="bi bi-info-circle" matTooltip="Résilience et régulation émotionnelle"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm7" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>8. Je me sens à la hauteur des attentes que je me fixe dans mon sport.
+                <i class="bi bi-info-circle" matTooltip="Auto-perception par rapport aux objectifs"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm8" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>9. Je crois que je peux accomplir de grandes choses dans mon sport si je continue à m’entraîner et à m'améliorer.
+                <i class="bi bi-info-circle"
+                    matTooltip="Optimisme et croyance en son potentiel"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm9" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>10. J'ai souvent l'impression que je ne mérite pas les compliments ou les réussites que j'obtiens dans mon sport.
+                <i class="bi bi-info-circle" matTooltip="Syndrome de l’imposteur, estime de soi fragile"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm10" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="mt-auto d-flex justify-content-center mt-3">
+        <button type="button" class="btn btn-secondary" (click)="onPrevious()">Retour</button>
+        <button type="button" class="btn btn-primary" (click)="onNext()">Suivant</button>
+    </div>
+</div>

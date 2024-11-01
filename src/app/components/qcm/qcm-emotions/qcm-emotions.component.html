@@ -1,0 +1,175 @@
+<div [formGroup]="formEmotion">
+    <h3 class="text-center">Émotions</h3>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    Définition
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Les émotions, dans le cadre de la préparation mentale, sont des réactions affectives qui
+                        influencent directement la performance. La préparation mentale aide à comprendre, réguler et
+                        utiliser les émotions pour qu'elles deviennent des atouts plutôt que des obstacles. Cela inclut
+                        la capacité à contrôler ses émotions sous pression, à transformer les émotions négatives en
+                        énergie positive, et à s’appuyer sur les émotions positives pour maintenir la motivation et la
+                        confiance. Une gestion émotionnelle efficace permet d’aborder les défis avec calme,
+                        concentration et résilience, ce qui est essentiel pour une performance optimale.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    Rôle
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>"Les émotions, en lien avec la préparation mentale, se réfèrent à l'ensemble des réactions
+                        affectives qu'une personne éprouve face à des événements, des situations ou des défis. Elles
+                        jouent un rôle crucial dans la performance, car elles peuvent à la fois être des catalyseurs de
+                        succès ou des obstacles à surmonter. En préparation mentale, la gestion des émotions est
+                        essentielle pour rester performant, calme et concentré dans les moments décisifs.
+                        "
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row g-3 mt-5">
+        <div class="col-9">
+            <p>1. Ressens-tu régulièrement de la frustration ou de la colère pendant tes entraînements ou tes
+                compétitions ?
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm1" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>2. As-tu du mal à te concentrer lorsque tu es stressé(e) par un enjeu important ?
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm2" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>3. Quand tu fais face à un échec ou à une mauvaise performance, ressens-tu des difficultés à retrouver
+                ton calme rapidement ?
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm3" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval3" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>4. Pendant une compétition, ressens-tu des moments où tes émotions prennent le dessus et affectent
+                négativement ta performance ?
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm4" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>5. As-tu tendance à ressasser les erreurs que tu fais pendant une compétition, ce qui perturbe la suite
+                de ta performance ?
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm5" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>6. Quand tu es sous pression, as-tu des pensées négatives qui viennent perturber ta confiance en toi ?
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm6" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>7. As-tu du mal à gérer tes émotions (stress, anxiété, frustration) avant une compétition importante ?
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm7" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>8. Ton humeur hors du terrain affecte-t-elle souvent tes performances sportives ?
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm8" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>9. Quand tu es en situation d’échec ou de difficulté, as-tu du mal à adapter ton comportement pour rester
+                positif et combatif ?
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm9" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>10. As-tu l’impression que tes émotions influencent la qualité de tes relations avec tes coéquipiers ou
+                entraîneurs lors des compétitions ?
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm10" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="mt-auto d-flex justify-content-center mt-3">
+        <button type="button" class="btn btn-secondary" (click)="onPrevious()">Retour</button>
+        <button type="button" class="btn btn-primary" (click)="onNext()">Suivant</button>
+    </div>
+</div>

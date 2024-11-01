@@ -1,0 +1,173 @@
+<div [formGroup]="formEnergie">
+    <h3 class="text-center">Énergie</h3>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    Définition
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>L'énergie, en lien avec la préparation mentale, fait référence à la mobilisation des ressources
+                        physiques et mentales nécessaires pour atteindre des performances optimales. Elle concerne la
+                        capacité d’un individu à maintenir un niveau de vitalité suffisant pour faire face aux défis,
+                        tout en gérant efficacement ses réserves d’énergie pour éviter l’épuisement. Une bonne gestion
+                        de l’énergie est essentielle pour maximiser la performance, la concentration, et la
+                        persévérance, que ce soit dans le sport, le travail, ou les activités quotidiennes
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    Rôle
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>L'énergie, dans le cadre de la préparation mentale, représente la capacité à mobiliser et réguler
+                        ses ressources mentales et physiques de manière optimale pour répondre aux exigences de la
+                        tâche. Elle inclut la gestion de l’énergie mentale (concentration, attention), l’énergie
+                        physique (effort et endurance), et la récupération après des périodes de stress ou d’effort
+                        intense. La préparation mentale vise à maintenir un niveau d'énergie adapté aux besoins de la
+                        situation, à éviter l’épuisement, et à permettre à l'individu de mobiliser ses forces au bon
+                        moment, pour atteindre une performance optimale.
+
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-3 mt-5">
+        <div class="col-9">
+            <p>1. J'ai l'impression que mes performances passées ont parfois été limitées par un manque d'énergie.
+                <i class="bi bi-info-circle" matTooltip="Impact du manque d'énergie passé sur les performances"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm1" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>2. Lorsque je repense à des moments où j'étais en pleine forme, cela m'aide à me motiver et à générer de l'énergie.
+                <i class="bi bi-info-circle" matTooltip="Utilisation de l'énergie positive passée pour stimuler le présent"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm2" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>3. Je me suis souvent senti(e) épuisé(e) après des compétitions ou des entraînements intenses.
+                <i class="bi bi-info-circle" matTooltip="Niveau de récupération après des efforts physiques passés"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm3" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>4. Je me sens énergique et plein(e) de vitalité pendant mes entraînements actuels.
+                <i class="bi bi-info-circle" matTooltip="Niveau d'énergie actuel à l'entraînement"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm4" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>5. J'ai souvent besoin de faire des pauses ou de réduire l’intensité des exercices à cause d’un manque d’énergie.
+
+                <i class="bi bi-info-circle" matTooltip="Fluctuations de l'énergie pendant les séances d'entraînement"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm5" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>6. Je parviens à maintenir un bon niveau d’énergie tout au long de la journée, même en dehors des entraînements.
+                <i class="bi bi-info-circle" matTooltip="Capacité à gérer l’énergie quotidienne, y compris hors du sport"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm6" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>7. Je me sens confiant(e) quant à ma capacité à maintenir un bon niveau d’énergie dans les compétitions à venir.
+                <i class="bi bi-info-circle" matTooltip="Perception de l’énergie future dans les compétitions"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm7" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>8. Je m'inquiète souvent de ne pas avoir assez d’énergie pour atteindre mes objectifs sportifs à long terme.
+                <i class="bi bi-info-circle" matTooltip="Inquiétudes concernant la durabilité de l'énergie sur le long terme"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm8" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>9. J'ai mis en place des stratégies pour gérer mon énergie et éviter l'épuisement à l’avenir.
+                <i class="bi bi-info-circle" matTooltip="Stratégies de gestion de l'énergie pour le futur"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm9" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>10. Je planifie mes périodes de récupération pour maintenir un bon niveau d'énergie sur le long terme.
+                <i class="bi bi-info-circle" matTooltip="Préparation et planification pour la gestion de l'énergie à long terme"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm10" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="mt-auto d-flex justify-content-center mt-3">
+        <button type="button" class="btn btn-secondary" (click)="onPrevious()">Retour</button>
+        <button type="button" class="btn btn-primary" (click)="onNext()">Suivant</button>
+    </div>
+</div>

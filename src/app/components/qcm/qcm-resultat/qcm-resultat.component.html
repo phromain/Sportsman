@@ -1,0 +1,69 @@
+<div class="container">
+  <h2 class="text-center mt-4">Carte Mentale</h2>
+  <div class="row mt-4">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Traits de personnalité</h5>
+          <div class="row">
+            <div class="col-md-12">
+              <div *ngFor="let category of combinedResults" class="mb-3">
+                <div class="d-flex align-items-center justify-content-between">
+                  <span>{{ Categories[category.key].beforeBar }}</span>
+
+                  <div class="progress mx-2 flex-grow-1" style="height: 30px;" (click)="showInfo(category)">
+                    <div class="progress-bar" [ngStyle]="{
+                        'width': (categoryPoints[category.key]?.total / Categories[category.key].maxPoints) * 100 + '%',
+                        'background-color': getBackgroundColor(category.key)
+                      }">
+                    </div>
+                    <div class="progress-title text-center"
+                      style="position: absolute; left: 0; right: 0; font-weight: bold; color: black;">
+                      {{ Categories[category.key].title }}
+                    </div>
+                  </div>
+                  <span>{{ Categories[category.key].afterBar }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Détails</h5>
+          <div *ngIf="selectedCategory">
+            <h3 class="font-weight-bold">{{ Categories[selectedCategory.key].title }}</h3>
+            <div class="d-flex justify-content-center align-items-center mb-3">
+              <div class="rounded-circle d-flex flex-column justify-content-center align-items-center" [ngStyle]="{
+                     'width': '100px',
+                     'height': '100px',
+                     'background-color': getBackgroundColor(selectedCategory.key),
+                     'color': 'black',
+                     'font-weight': 'bold',
+                     'text-align': 'center'
+                   }">
+                <span class="text-center" style="font-size: 18px;">
+                  {{ categoryPoints[selectedCategory.key]?.total || 0 }}
+                </span>
+                <span>Score</span>
+              </div>
+            </div>
+            <p class="fs-5">{{ selectedCategory.result.text }}</p>
+            <p *ngIf="selectedCategory.typResult" class="mt-2">Informations supplémentaires : <br>{{ selectedCategory.typResult }}</p>
+          </div>
+          <p *ngIf="!selectedCategory">Cliquez sur une catégorie pour voir les détails.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-md-5 mx-auto">
+      <button  class="btn btn-primary btn-lg w-100" [routerLink]="['/qcm-pdf']" >Obtenir le PDF</button>
+    </div>
+  </div>
+</div>

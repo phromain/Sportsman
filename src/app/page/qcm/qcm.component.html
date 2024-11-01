@@ -1,0 +1,49 @@
+<app-header></app-header>
+
+<div class="container mt-3 mb-3" *ngIf="currentStep >= 1 && currentStep <= 9">
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" [style.width]="getProgress() + '%'"
+            [attr.aria-valuenow]="currentStep" aria-valuemin="1" aria-valuemax="9">
+            Étape {{currentStep}} sur 9
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <ng-container *ngIf="currentStep === 0">
+        <app-qcm-info (next)="onNext()" (previous)="onPrevious()"></app-qcm-info>
+    </ng-container>
+    <ng-container *ngIf="currentStep === 1">
+        <app-qcm-communication (next)="onNext()" (previous)="onPrevious()"></app-qcm-communication>
+    </ng-container>
+    <ng-container *ngIf="currentStep === 2">
+        <app-qcm-concentration (next)="onNext()" (previous)="onPrevious()"></app-qcm-concentration>
+    </ng-container>
+    <ng-container *ngIf="currentStep === 3">
+        <app-qcm-activation (next)="onNext()" (previous)="onPrevious()"></app-qcm-activation>
+    </ng-container>
+    <ng-container *ngIf="currentStep === 4">
+        <app-qcm-stress-anxiete (next)="onNext()" (previous)="onPrevious()"></app-qcm-stress-anxiete>
+    </ng-container>
+    <ng-container *ngIf="currentStep === 5">
+        <app-qcm-confiance (next)="onNext()" (previous)="onPrevious()"></app-qcm-confiance>
+    </ng-container>
+    <ng-container *ngIf="currentStep === 6">
+        <app-qcm-motivation (next)="onNext()" (previous)="onPrevious()"></app-qcm-motivation>
+    </ng-container>
+    <ng-container *ngIf="currentStep === 7">
+        <app-qcm-emotions (next)="onNext()" (previous)="onPrevious()"></app-qcm-emotions>
+    </ng-container>
+    <ng-container *ngIf="currentStep === 8">
+        <app-qcm-estime (next)="onNext()" (previous)="onPrevious()"></app-qcm-estime>
+    </ng-container>
+    <ng-container *ngIf="currentStep === 9">
+        <app-qcm-energie (next)="onNext()" (previous)="onPrevious()"></app-qcm-energie>
+    </ng-container>
+    <ng-container *ngIf="currentStep === 10">
+        <app-qcm-resultat></app-qcm-resultat>
+    </ng-container>
+</div>
+<app-footer></app-footer>

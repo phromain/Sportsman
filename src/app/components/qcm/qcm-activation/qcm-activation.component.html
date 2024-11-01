@@ -1,0 +1,152 @@
+<div [formGroup]="formActivation">
+    <h3 class="text-center">Activation</h3>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header"> <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne"> Définition </button> </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>L'activation, en lien avec la préparation mentale, se réfère à la capacité d’un individu à
+                        réguler son niveau d’énergie physique et mentale en fonction des exigences d’une situation
+                        donnée. Cela implique d'atteindre un état optimal d’éveil et de mobilisation de ses ressources
+                        internes, sans être sous-activé (manque d’énergie) ni sur-activé (excès de tension ou
+                        d'anxiété), afin d'optimiser la performance.</p>
+                    <p>Dans le cadre de la préparation mentale, l’activation est cruciale pour adapter son état à la
+                        tâche à accomplir :</p>
+                    <ul>
+                        <li><strong>Gestion de l’énergie</strong> : L’activation consiste à trouver le juste équilibre
+                            entre calme et énergie. Elle implique de mobiliser l’énergie nécessaire pour une performance
+                            optimale sans être submergé par l’excitation ou la nervosité, ni être trop relâché, ce qui
+                            pourrait entraîner un manque de concentration.</li>
+                        <li><strong>Ajustement en fonction du contexte</strong> : Différentes situations exigent
+                            différents niveaux d'activation. Par exemple, une compétition sportive intense peut
+                            nécessiter un haut niveau d'activation pour mobiliser toute la force et l’endurance
+                            nécessaires. En revanche, des situations requérant de la précision (comme un tir à l'arc ou
+                            une prise de parole) peuvent exiger un niveau d'activation plus modéré pour maintenir la
+                            concentration et le contrôle.</li>
+                        <li><strong>Techniques de régulation</strong> : En préparation mentale, des techniques
+                            spécifiques sont utilisées pour augmenter ou diminuer l'activation selon les besoins. Cela
+                            inclut la respiration contrôlée, la visualisation, les affirmations positives, ou encore des
+                            routines pré-compétition qui permettent de monter en puissance ou de se calmer.</li>
+                        <li><strong>Éviter l’excès de stress</strong> : Une activation excessive peut entraîner du
+                            stress, de l’anxiété, ou un blocage, ce qui nuit à la performance. Le but est d’apprendre à
+                            reconnaître ses signes d’excès d’activation (tensions musculaires, pensées confuses) et de
+                            ramener son état mental et physique à un niveau optimal.</li>
+                    </ul>
+                    <p>En résumé : L'activation en préparation mentale est la capacité à ajuster son niveau d’énergie en
+                        fonction des besoins de la situation, pour atteindre un état de performance optimal. Elle
+                        implique une gestion fine de son état d’éveil, en mobilisant l’énergie nécessaire sans tomber
+                        dans l’excès de tension ou la sous-activation, pour rester efficace et concentré.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row g-3 mt-5">
+        <div class="col-9">
+            <p>1. Te sens-tu énergique et prêt(e) à donner le meilleur de toi-même avant la compétition ? <i
+                    class="bi bi-info-circle" matTooltip="Énergie physique"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm1" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>2. Ressens-tu une légère tension ou excitation avant l’effort physique ? <i class="bi bi-info-circle"
+                    matTooltip="Tension utile"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm2" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>3. As-tu l'impression d'être concentré(e) sur ce que tu dois accomplir aujourd'hui ? <i
+                    class="bi bi-info-circle" matTooltip="Concentration mentale"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm3" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>4. Te sens-tu calme et confiant(e) quant à ta capacité à gérer l’effort à venir ? <i
+                    class="bi bi-info-circle" matTooltip="Confiance et calme intérieur"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm4" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>5. Est-ce que tu ressens de la nervosité ou de l’anxiété avant de commencer ? <i
+                    class="bi bi-info-circle" matTooltip="Anxiété, stress émotionnel"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm5" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>6. Ton corps est-il réactif et prêt à bouger rapidement, sans fatigue excessive ? <i
+                    class="bi bi-info-circle" matTooltip="Réactivité physique"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm6" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>7. Te sens-tu mentalement éveillé(e) et clair(e) dans ta réflexion avant la compétition ? <i
+                    class="bi bi-info-circle" matTooltip="Clarté mentale"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm7" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>8. Ressens-tu que ton rythme cardiaque est légèrement accéléré, sans te sentir trop essoufflé(e) ? <i
+                    class="bi bi-info-circle" matTooltip="Fréquence cardiaque et contrôle de la respiration"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm8" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>9. Te sens-tu impatient(e) ou excité(e) à l'idée de commencer ? <i class="bi bi-info-circle"
+                    matTooltip="Motivation et impatience positive"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm9" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>10. Ressens-tu un bon équilibre entre l'envie d'agir et le contrôle de tes émotions ? <i
+                    class="bi bi-info-circle" matTooltip="Contrôle émotionnel et excitation maîtrisée"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm10" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="mt-auto d-flex justify-content-center mt-3">
+        <button type="button" class="btn btn-secondary" (click)="onPrevious()">Retour</button>
+        <button type="button" class="btn btn-primary" (click)="onNext()">Suivant</button>
+    </div>
+</div>

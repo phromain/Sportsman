@@ -1,0 +1,167 @@
+<div [formGroup]="formConfiance">
+    <h3 class="text-center">Confiance</h3>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    Définition
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>La confiance, dans le cadre de la préparation mentale, est la conviction en ses propres capacités
+                        à réussir et à faire face aux défis. Elle se construit grâce à une préparation rigoureuse, des
+                        outils comme la visualisation et les affirmations positives, et à travers la gestion des échecs
+                        de manière constructive. La confiance est un facteur clé qui influence directement la
+                        performance, l’engagement, et la capacité à persévérer face aux obstacles. Une bonne préparation
+                        mentale vise à développer cette confiance en soi pour que l'individu aborde chaque situation
+                        avec assurance et calme.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    Rôle
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>La confiance en soi est un facteur déterminant dans la performance. Elle permet de s'engager
+                        pleinement dans ses compétences, de prendre des décisions rapidement et de mieux gérer les
+                        situations stressantes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-3 mt-5">
+        <div class="col-9">
+            <p>1. J'ai souvent des doutes sur mes capacités à cause d'échecs ou de mauvaises performances passées.
+                <i
+                    class="bi bi-info-circle" matTooltip="Impact des échecs passés sur la confiance actuelle"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm1" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>2. Je me remémore fréquemment mes réussites passées pour me donner du courage lors des compétitions.
+                <i class="bi bi-info-circle"
+                    matTooltip="Utilisation des succès passés pour booster la confiance"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm2" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>3. Les erreurs que j'ai commises par le passé me font souvent perdre confiance en moi dans des situations similaires.
+                <i class="bi bi-info-circle"
+                    matTooltip="Répercussions des erreurs passées sur la confiance"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm3" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>4. Je me sens sûr(e) de mes compétences pendant les entraînements ou les compétitions.
+                <i class="bi bi-info-circle" matTooltip="Sentiment de maîtrise des compétences dans le présent"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm4" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>5. Je me concentre pleinement sur ce que je fais sans douter de mes capacités.
+                <i
+                    class="bi bi-info-circle" matTooltip="Absence de doutes lors de la performance actuelle"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm5" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>6. Lorsque je rencontre des difficultés pendant une compétition, je me fais confiance pour m’adapter et réagir efficacement.
+                <i class="bi bi-info-circle"
+                    matTooltip="Capacité à faire face aux défis en s’appuyant sur la confiance actuelle"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm6" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>7. Je suis confiant(e) quant à mes chances de réussir mes futures compétitions.
+
+                <i class="bi bi-info-circle" matTooltip="Confiance dans les performances futures"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm7" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>8. Je m'inquiète fréquemment de ne pas être à la hauteur lors des prochains événements sportifs.
+                <i
+                    class="bi bi-info-circle" matTooltip="Inquiétudes quant aux performances futures"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm8" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>9. Je crois en mes capacités à atteindre mes objectifs à long terme dans ma carrière sportive.
+
+                <i class="bi bi-info-circle" matTooltip="Confiance dans la réalisation des objectifs futurs"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm9" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>10. Je me prépare mentalement à réussir mes compétitions à venir et cela renforce ma confiance.
+
+                <i class="bi bi-info-circle" matTooltip="Préparation mentale pour renforcer la confiance dans le futur"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm10" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="mt-auto d-flex justify-content-center mt-3">
+        <button type="button" class="btn btn-secondary" (click)="onPrevious()">Retour</button>
+        <button type="button" class="btn btn-primary" (click)="onNext()">Suivant</button>
+    </div>
+</div>

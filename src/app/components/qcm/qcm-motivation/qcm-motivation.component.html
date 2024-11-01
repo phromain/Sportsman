@@ -1,0 +1,176 @@
+<div [formGroup]="formMotivation">
+    <h3 class="text-center">Motivation</h3>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    Définition
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>La motivation, dans le cadre de la préparation mentale, est la force qui pousse un individu à
+                        rester engagé, à persévérer et à maintenir ses efforts vers l'atteinte de ses objectifs. Elle
+                        peut être nourrie par des sources internes (intrinsèques) ou externes (extrinsèques) et est
+                        soutenue par des techniques comme la fixation d’objectifs, la visualisation, et les affirmations
+                        positives. Une bonne préparation mentale vise à renforcer cette motivation, à la raviver en cas
+                        de baisse de régime, et à l'utiliser pour surmonter les obstacles et atteindre la performance
+                        optimale.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    Rôle
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>La motivation est un élément fondamental de la réussite sportive. Elle permet de maintenir
+                        l’effort et l’engagement malgré les difficultés, qu’il s’agisse de motivation intrinsèque (liée
+                        au plaisir de la pratique) ou extrinsèque (liée à des récompenses externes).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-3 mt-5">
+        <div class="col-9">
+            <p>1. Mes expériences passées en sport (échecs) influencent mon niveau de motivation actuel.
+                <i class="bi bi-info-circle" matTooltip="Influence des expériences passées sur la motivation actuelle"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm1" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>2. Lorsque je repense à mes anciens objectifs atteints, cela me motive pour en fixer de nouveaux.
+                <i class="bi bi-info-circle" matTooltip="Impact des réussites passées sur la motivation future"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm2" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>3. Les moments où j’ai abandonné ou échoué par le passé affectent ma motivation aujourd'hui.
+                <i class="bi bi-info-circle" matTooltip="Répercussions des abandons ou échecs sur la motivation actuelle"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm3" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>4. Je me sens motivé(e) chaque jour pour m’entraîner et donner le meilleur de moi-même.
+                <i class="bi bi-info-circle" matTooltip="Motivation quotidienne à l’entraînement"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm4" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>5. Je reste motivé(e) même lorsque je rencontre des difficultés pendant mes entraînements ou compétitions.
+                <i class="bi bi-info-circle" matTooltip="Motivation face aux obstaclese"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm5" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>6. Je trouve du plaisir et de la satisfaction dans chaque session d'entraînement, indépendamment des résultats.
+
+                <i class="bi bi-info-circle"
+                    matTooltip="Motivation intrinsèque à s’entraîner"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm6" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>7. Je suis motivé(e) à l’idée d’atteindre mes objectifs futurs et de repousser mes limites.
+
+
+                <i class="bi bi-info-circle" matTooltip="Motivation à atteindre des objectifs à long terme"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm7" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>8. Je me sens démotivé(e) lorsque je pense aux efforts nécessaires pour réussir à long terme.
+
+                <i class="bi bi-info-circle" matTooltip="Découragement face à l’ampleur des efforts futurs"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm8" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>9. Je me fixe des objectifs précis et ambitieux pour maintenir ma motivation dans le temps.
+
+
+                <i class="bi bi-info-circle" matTooltip="Utilisation d'objectifs futurs pour stimuler la motivation"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm9" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>10. Les récompenses ou la reconnaissance extérieure (médailles, titres) sont une source importante de motivation pour moi.
+
+
+                <i class="bi bi-info-circle"
+                    matTooltip="Motivation extrinsèque liée à la reconnaissance future"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm10" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="mt-auto d-flex justify-content-center mt-3">
+        <button type="button" class="btn btn-secondary" (click)="onPrevious()">Retour</button>
+        <button type="button" class="btn btn-primary" (click)="onNext()">Suivant</button>
+    </div>
+</div>

@@ -1,0 +1,186 @@
+<div [formGroup]="formStressAnxiete">
+    <h3 class="text-center">Stress & Anxiété</h3>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    Définition
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Le stress et l'anxiété, en lien avec la préparation mentale, sont des réactions psychologiques et
+                        physiologiques que les individus éprouvent face à des situations perçues comme exigeantes,
+                        menaçantes ou incertaines. Ces deux émotions, bien que similaires, ont des nuances distinctes.
+                        Le stress est souvent une réponse directe à une situation spécifique (examen, compétition),
+                        tandis que l'anxiété est une inquiétude plus diffuse, parfois liée à l’anticipation d’événements
+                        futurs ou d’incertitudes.</p>
+                    <p>Dans le cadre de la préparation mentale, la gestion du stress et de l’anxiété est essentielle
+                        pour permettre aux individus de maintenir leur concentration, leur calme, et leur efficacité
+                        dans les moments critiques.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    Rôle
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>La gestion du stress et de l’anxiété est essentielle pour permettre aux individus de maintenir
+                        leur concentration, leur calme, et leur efficacité dans les moments critiques.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row g-3 mt-5">
+        <div class="col-9">
+            <p>1. Avant une compétition ou un entraînement important, je ressens une montée de tension physique
+                (accélération du rythme cardiaque, transpiration, etc.).
+                <i class="bi bi-info-circle" matTooltip="Réponse physique au stress"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm1" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>2. Je ressens souvent une pression intense à devoir bien performer, et cela affecte ma concentration.
+                <i class="bi bi-info-circle" matTooltip="Pression de performance"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm2" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>3. Je me sens sous pression quand les attentes de mon entraîneur ou de mes coéquipiers sont élevées.
+                <i class="bi bi-info-circle" matTooltip="Stress lié aux attentes des autres"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm3" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>4. Juste avant de commencer une compétition, je ressens un niveau de tension que j'ai du mal à gérer.
+                <i class="bi bi-info-circle" matTooltip="Tension pré-compétitive"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm4" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>5. Pendant un match ou une compétition difficile, je ressens une fatigue ou une perte d’énergie à cause
+                de la pression.
+                <i class="bi bi-info-circle" matTooltip="Impact du stress sur l’énergie"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm5" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>6. Je me fais souvent du souci à l’avance pour des compétitions ou des situations sportives qui ne se
+                dérouleront que dans plusieurs jours.
+
+                <i class="bi bi-info-circle" matTooltip="Anxiété anticipatoire"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm6" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>7. Même lorsque je ne suis pas en compétition, j’ai tendance à m'inquiéter de ma performance future.
+
+                <i class="bi bi-info-circle" matTooltip="Inquiétude persistante"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm7" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>8. J'ai souvent peur de décevoir les autres ou de ne pas être à la hauteur, même si la compétition n’a
+                pas encore commencé.
+
+                <i class="bi bi-info-circle" matTooltip="Peur de l’échec et anxiété sociale"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm8" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>9. Il m'arrive fréquemment de repenser aux erreurs que j'ai faites dans le passé et d'avoir peur de les
+                reproduire.
+
+                <i class="bi bi-info-circle" matTooltip="Ruminations et anxiété passée"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm9" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>10. En général, je me sens souvent anxieux(se) à propos de ma carrière sportive, même sans compétition
+                imminente.
+
+                <i class="bi bi-info-circle" matTooltip="Anxiété généralisée liée au sport"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm10" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="mt-auto d-flex justify-content-center mt-3">
+        <button type="button" class="btn btn-secondary" (click)="onPrevious()">Retour</button>
+        <button type="button" class="btn btn-primary" (click)="onNext()">Suivant</button>
+    </div>
+</div>

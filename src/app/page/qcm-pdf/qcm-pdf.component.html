@@ -1,0 +1,67 @@
+<div #pdfContent class="container pdf-container">
+  <h1 class="mt-4 text-center pdf-title">Carte Mentale</h1>
+
+  <div class="row mt-5 justify-content-center">
+    <div class="col-md-4">
+      <div class="card h-100 d-flex flex-column mx-auto">
+        <div class="card-body">
+          <h5 class="card-title">Informations Personnelles</h5>
+          <div>
+            <p><strong>Nom :</strong> {{ personalInfo.firstName }} </p>
+            <p><strong>Prénom :</strong> {{ personalInfo.lastName }}</p>
+            <p><strong>Âge :</strong> {{ personalInfo.age }}</p>
+            <p><strong>Sujet :</strong> {{ personalInfo.subject }}</p>
+            <p><strong>Objectif :</strong> {{ personalInfo.objective }}</p>
+            <p><strong>Évènement :</strong> {{ personalInfo.event }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card h-100 d-flex flex-column mx-auto">
+        <div class="card-body">
+          <h5 class="card-title mb-4">Traits de personnalité</h5>
+          <div *ngFor="let category of combinedResults" class="mb-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <span class="fs-6">{{ Categories[category.key].beforeBar }}</span>
+              <div class="progress mx-2 flex-grow-1 position-relative" style="height: 30px;">
+                <div class="progress-bar d-flex justify-content-center align-items-center text-black fw-bold" [ngStyle]="{
+                    'width': (categoryPoints[category.key]?.total / Categories[category.key].maxPoints) * 100 + '%',
+                    'background-color': getBackgroundColor(category.key)
+                  }">
+                  {{ Categories[category.key].title }}
+                </div>
+              </div>
+              <span class="fs-6">{{ Categories[category.key].afterBar }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <h2 class="text-center">Détails par Catégorie</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-12 mb-5">
+          <div *ngFor="let category of combinedResults" class="border rounded p-3 my-3 mb-4 mt-4" [attr.id]="'category-' + category.key" style="height: 200px;"> 
+            <h4 class="fw-bold">{{ category.title }} :</h4>
+            <div class="row align-items-center">
+              <div class="col-2 d-flex align-items-center justify-content-center">
+                <div class="rounded-circle d-flex align-items-center justify-content-center"
+                  [style.backgroundColor]="getBackgroundColor(category.key)"
+                  style="width: 60px; height: 60px; color: black;">
+                  <span>{{ categoryPoints[category.key]?.total || 0 }}</span>
+                </div>
+              </div>
+              <div class="col">
+                <p>{{ category.result.text }}</p>
+                <p *ngIf="category.typResult">Informations supplémentaires : {{ category.typResult }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

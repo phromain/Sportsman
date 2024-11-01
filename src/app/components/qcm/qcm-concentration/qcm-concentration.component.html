@@ -1,0 +1,182 @@
+<div [formGroup]="formConcentration">
+    <h3 class="text-center">Concentration</h3>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    Définition
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>La concentration, en lien avec la préparation mentale, se définit comme la capacité d'un individu
+                        à diriger et maintenir son attention sur une tâche ou un objectif spécifique, tout en bloquant
+                        les distractions internes et externes, afin d'optimiser sa performance dans des situations de
+                        haute exigence, comme des compétitions, des entraînements ou des moments sous pression.</p>
+                    <p>Dans le cadre de la préparation mentale, la concentration est un élément central, influençant
+                        directement la qualité de la performance. Voici les aspects clés :</p>
+                    <ul>
+                        <li><strong>Focus sélectif</strong> : La capacité à choisir consciemment où diriger son
+                            attention (ex : sur la tâche immédiate plutôt que sur le résultat final) est essentielle
+                            pour éviter la dispersion mentale et maintenir une performance optimale.</li>
+                        <li><strong>Blocage des distractions</strong> : La concentration permet de filtrer les
+                            distractions (qu’elles soient physiques, émotionnelles ou mentales) qui peuvent interférer
+                            avec la tâche en cours. Cela inclut la gestion des pensées anxiogènes ou des facteurs de
+                            stress externes.</li>
+                        <li><strong>Endurance cognitive</strong> : La concentration doit être soutenue sur une durée
+                            prolongée, particulièrement dans des activités qui nécessitent un engagement mental constant
+                            (ex : compétition sportive ou examen). La préparation mentale aide à développer cette
+                            endurance mentale.</li>
+                        <li><strong>Réajustement après une distraction</strong> : En préparation mentale, il est
+                            important de développer la capacité à réorienter rapidement son attention après une
+                            distraction ou une erreur, sans que cela n’impacte négativement la performance.</li>
+                    </ul>
+                    <p>En résumé, la concentration est la capacité à garder son attention focalisée sur les éléments les
+                        plus importants dans l’instant, en maîtrisant les distractions. C’est une compétence cruciale
+                        dans la préparation mentale, permettant de maximiser l’efficacité mentale et physique dans des
+                        contextes de performance élevée.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    Rôle
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>La concentration est une compétence mentale cruciale pour les athlètes, car elle leur permet de
+                        se focaliser sur la tâche à accomplir, de gérer les distractions et de performer à leur meilleur
+                        niveau. Évaluer la concentration d'un athlète en fonction de son attention sur le passé, le
+                        présent et le futur peut offrir des perspectives précieuses sur son état d'esprit et ses
+                        performances.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-3 mt-5">
+        <div class="col-9">
+            <p>1. Je ressasse souvent des erreurs que j’ai commises lors des compétitions précédentes. <i
+                    class="bi bi-info-circle" matTooltip="Préoccupation sur le passé"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm1" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>2. Je me sens parfois submergé(e) par des souvenirs de mes performances passées, ce qui affecte ma
+                concentration actuelle. <i class="bi bi-info-circle"
+                    matTooltip="Impact des souvenirs sur la concentration"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm2" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>3. Je prends souvent trop de temps à réfléchir à mes performances passées, ce qui m'empêche de me
+                concentrer sur le moment présent. <i class="bi bi-info-circle"
+                    matTooltip="Difficulté à lâcher prise sur le passé"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm3" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>4. Pendant l’entraînement ou la compétition, je me sens pleinement engagé(e) et concentré(e) sur ce que
+                je fais. <i class="bi bi-info-circle" matTooltip="Attention au moment présent"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm4" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>5. Je suis capable de bloquer les distractions extérieures lorsque je suis en action. <i
+                    class="bi bi-info-circle" matTooltip="Capacité à ignorer les distractions"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm5" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>6. Je fais régulièrement des exercices de respiration ou de méditation pour renforcer ma concentration
+                sur le moment présent. <i class="bi bi-info-circle"
+                    matTooltip="Utilisation de techniques pour améliorer la concentration"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm6" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>7. Je me préoccupe souvent de mes performances futures, ce qui me distrait de mes entraînements actuels.
+                <i class="bi bi-info-circle" matTooltip="Anxiété liée à l'avenir"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm7" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>8. Je fixe des objectifs clairs et précis pour l'avenir, ce qui m'aide à me concentrer davantage. <i
+                    class="bi bi-info-circle" matTooltip="Utilisation d'objectifs pour maintenir la concentration"></i>
+            </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm8" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>9. J'ai tendance à m'inquiéter de ce qui pourrait mal se passer lors des prochaines compétitions.
+                <i class="bi bi-info-circle" matTooltip="Inquiétudes sur les performances futures"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm9" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>10. Je planifie des stratégies pour aborder les prochaines compétitions, ce qui me permet de rester
+                concentré(e) sur mon entraînement.
+                <i class="bi bi-info-circle" matTooltip="Préparation stratégique pour l'avenir"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm10" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="mt-auto d-flex justify-content-center mt-3">
+        <button type="button" class="btn btn-secondary" (click)="onPrevious()">Retour</button>
+        <button type="button" class="btn btn-primary" (click)="onNext()">Suivant</button>
+    </div>
+</div>

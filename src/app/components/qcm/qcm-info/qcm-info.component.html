@@ -1,0 +1,74 @@
+<div>
+    <p>
+        Assure-toi de bien lire les consignes avant de commencer.<br>
+        Compte environ 20 minutes !<br>
+        Une fois ton questionnaire rempli, tu pourras consulter les RÉSULTATS.<br><br>
+        Vous allez remplir un questionnaire de 90 questions. Allez au bout de chaque bloc avant de faire une pause.<br>
+        Répondez le plus spontanément possible.<br>
+        Prenez bien le temps de vous assurer de votre réponse.<br>
+        Assurez-vous de n'avoir qu'un seul chiffre par ligne.<br>
+    </p>
+</div>
+<div [formGroup]="formInfo">
+    <div class="needs-validation" novalidate>
+        <div class="row g-3">
+            <div class="col-sm-6">
+                <label for="firstName" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="firstName" formControlName="firstName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Un nom valide est requis.
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <label for="lastName" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="lastName" formControlName="lastName" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Un prénom valide est requis.
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <label for="age" class="form-label">Âge</label>
+                <input type="number" class="form-control" id="age" formControlName="age" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Un âge valide est requis.
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="subject" class="form-label">Tu réponds au questionnaire au sujet :</label>
+                <select class="form-select" id="subject" formControlName="subject" required>
+                    <option value="">Choisissez...</option>
+                    <option>Vie professionnelle</option>
+                    <option>Sport</option>
+                    <option>Vie étudiante</option>
+                    <option>Vie quotidienne</option>
+                </select>
+                <div class="invalid-feedback">
+                    Veuillez fournir un sujet valide.
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <label for="objective" class="form-label">Ton Objectif</label>
+                <input type="text" class="form-control" id="objective" formControlName="objective" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Un objectif valide est requis.
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="event" class="form-label">Évènement</label>
+                <select class="form-select" id="event" formControlName="event" required>
+                    <option value="">Choisissez...</option>
+                    <option>Compétition sportive</option>
+                    <option>Examen pour un étudiant</option>
+                    <option>Évènement professionnel</option>
+                    <option>Autre</option>
+                </select>
+                <div class="invalid-feedback">
+                    Veuillez fournir un évènement valide.
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            <button type="button" class="btn btn-primary" (click)="onNext()">Suivant</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,188 @@
+<div [formGroup]="formCommunication">
+    <h3 class="text-center">Communication</h3>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                    aria-controls="panelsStayOpen-collapseOne">
+                    Définition
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>La communication, en lien avec la préparation mentale, peut être définie comme la capacité d’un
+                        individu à transmettre et recevoir efficacement des informations, des pensées, des émotions ou
+                        des instructions, de manière à optimiser sa performance dans des situations spécifiques, qu’il
+                        s’agisse de compétition, d’entraînement ou de moments de haute pression.</p>
+                    <p>Dans le cadre de la préparation mentale, la communication joue un rôle clé dans plusieurs
+                        domaines :</p>
+                    <ul>
+                        <li>Communication interne (dialogue interne) : La manière dont une personne se parle à elle-même
+                            influence son état mental et ses performances. Un dialogue interne positif (ex :
+                            affirmations, auto-motivation) est essentiel pour maintenir la confiance et la
+                            concentration.</li>
+                        <li>Communication avec les autres : Dans un contexte sportif ou professionnel, la capacité à
+                            communiquer clairement avec ses coéquipiers, entraîneurs, ou collègues est cruciale. Une
+                            bonne communication améliore la compréhension des objectifs, la coordination, et aide à
+                            gérer les pressions externes.</li>
+                        <li>Expression des émotions et besoins : Être capable de communiquer ses émotions, ses besoins
+                            ou ses limites de manière efficace (sans frustration ou colère) contribue à un état mental
+                            plus stable et prépare mieux l’individu à faire face aux défis.</li>
+                    </ul>
+                    <p>En résumé, dans la préparation mentale, la communication est un outil stratégique qui permet
+                        d’aligner son état psychologique avec ses objectifs de performance, en s’appuyant sur un
+                        dialogue interne constructif et des échanges clairs avec les autres.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                    aria-controls="panelsStayOpen-collapseTwo">
+                    Rôle
+                </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>L'évaluation de la communication est essentielle pour les athlètes, en entreprise ou pour les
+                        étudiants, car elle joue un rôle crucial dans le travail d'équipe, la compréhension des
+                        stratégies et la gestion des relations avec les entraîneurs, son manager et ses coéquipiers,
+                        collègues ou partenaires. Une communication efficace peut renforcer la cohésion d’équipe et
+                        améliorer la performance individuelle et collective.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row g-3 mt-5">
+        <div class="col-9">
+            <p>1. Je suis à l'aise pour exprimer mes idées ou mes préoccupations à mes coéquipiers. <i
+                    class="bi bi-info-circle" matTooltip="Confiance dans l'expression"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm1" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>2. J'écoute attentivement mes coéquipiers lorsqu'ils s'expriment. <i class="bi bi-info-circle"
+                    matTooltip="Capacité d'écoute"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm2" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>3. Lorsque je reçois des critiques, je suis capable de les accepter sans me sentir attaqué(e). <i
+                    class="bi bi-info-circle" matTooltip="Gestion des critiques"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm3" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>4. Je m’efforce de donner des feedbacks constructifs à mes coéquipiers pour les aider à progresser. <i
+                    class="bi bi-info-circle" matTooltip="Capacité à donner des feedbacks"></i> </p>
+        </div>
+        <div class="col-3"> <select class="form-select" formControlName="qcm4" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select> </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>5. Je suis capable de poser des questions pour clarifier des instructions ou des stratégies. <i
+                    class="bi bi-info-circle" matTooltip="Proactivité dans la communication"></i> </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm5" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>6. Je trouve difficile de parler en public ou devant un groupe, même si c'est important pour
+                l'équipe.
+                <i class="bi bi-info-circle" matTooltip="Anxiété face à la prise de parole"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm6" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>7. Je suis capable de discuter ouvertement des conflits ou des désaccords avec mes coéquipiers ou
+                entraîneurs.
+                <i class="bi bi-info-circle" matTooltip="Gestion des conflits"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm7" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>8. J'utilise un langage positif et motivant lors des échanges avec mes coéquipiers.
+                <i class="bi bi-info-circle" matTooltip="Utilisation du langage positif"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm8" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>9. Je fais des efforts pour comprendre le point de vue des autres, même lorsque je ne suis pas
+                d'accord.
+                <i class="bi bi-info-circle" matTooltip="Empathie dans la communication"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm9" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval1" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row g-3 mt-3">
+        <div class="col-9">
+            <p>10. Je me sens parfois mal compris(e) par mes coéquipiers ou entraîneurs, ce qui me frustre.
+                <i class="bi bi-info-circle" matTooltip="Sentiment de malentendu"></i>
+            </p>
+        </div>
+        <div class="col-3">
+            <select class="form-select" formControlName="qcm10" required>
+                <option value="">Choisissez...</option>
+                <option *ngFor="let option of eval2" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="mt-auto d-flex justify-content-center mt-3">
+        <button type="button" class="btn btn-secondary" (click)="onPrevious()">Retour</button>
+        <button type="button" class="btn btn-primary" (click)="onNext()">Suivant</button>
+    </div>
+</div>
